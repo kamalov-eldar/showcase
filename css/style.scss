@@ -1,0 +1,769 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/Montserrat-Regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/Montserrat-Regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("/fonts/Montserrat-Bold.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/Montserrat-Bold.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  box-sizing: border-box; // чтоб паддинги не увеличивали блок
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; // чтоб паддинги не увеличивали блок
+}
+
+img {
+  max-width: 100%; // чтоб не прывышало размеры контейнера
+  height: auto; // для пропорционального сжатия по высоте
+}
+
+//убирает подсветку во всех браузерах на input, select, button, a
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+body {
+  min-width: 230px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  font-size: 12px;
+  line-height: 15px;
+  background: #ffffff;
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: 1200px) /* меньше или равно */ {
+    width: 100%;
+    padding: 0 20px;
+  }
+  @media (max-width: 960px) /* меньше или равно */ {
+    padding: 0 10px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  min-height: 252px;
+  background: url("../img/bg.jpg"), rgba(31, 32, 33, 0.79);
+  background-blend-mode: multiply;
+  background-position: bottom center;
+  background-size: cover;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    @media (max-width: 768px) /* меньше или равно */ {
+      display: none;
+    }
+  }
+
+  .wrapper__mobile-menu {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    flex-direction: column;
+    z-index: 2;
+    margin: 0;
+    background: rgba(31, 32, 33, 1);
+    border: none;
+
+    /* @media (max-width: 768px) {
+      display: flex;
+    } */
+  }
+
+  &__logo {
+    img {
+      max-width: none; // чтоб не прывышало размеры контейнера
+      //height: ; // для пропорционального сжатия по высоте
+    }
+
+    @media (max-width: 768px) /* меньше или равно */ {
+      display: none;
+    }
+  }
+
+  &__row-close {
+    display: none;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    //right: 30px;
+    z-index: 2;
+    &:active,
+    &:hover {
+      opacity: 0.8;
+      fill: #ffffff;
+    }
+    /*  @media (max-width: 768px) {
+      display: block;
+    } */
+  }
+
+  .close__line {
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    &:first-child {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    @media (max-width: 768px) /* меньше или равно */ {
+      flex-direction: column;
+      margin: 90px 0;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    margin-right: 80px;
+
+    @media (max-width: 1200px) /* меньше или равно */ {
+      margin-right: 60px;
+    }
+    @media (max-width: 960px) /* меньше или равно */ {
+      margin-right: 30px;
+    }
+
+    @media (max-width: 768px) /* меньше или равно */ {
+      text-align: center;
+      margin: 15px 0;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0px;
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &__phone {
+    @media (max-width: 768px) /* меньше или равно */ {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &__phone-number {
+    display: block;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__phone-tel {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  &__phone-text {
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 22px;
+    @media (max-width: 768px) /* меньше или равно */ {
+      justify-content: center;
+    }
+  }
+
+  &__found {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    color: #ffffff;
+    @media (max-width: 768px) /* меньше или равно */ {
+      margin-top: 140px;
+    }
+  }
+}
+
+/**********Кнопка меню мобильная****************/
+
+.header__toggle {
+  //кнопка
+  display: none;
+  position: fixed;
+  //position: absolute;
+  z-index: 1;
+  top: 40px;
+  left: 30px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  &:active,
+  &:hover {
+    opacity: 0.8;
+    fill: #ffffff;
+  }
+  @media (max-width: 768px) /* меньше или равно */ {
+    display: block;
+  }
+}
+.toggle__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+}
+.toggle__line_first {
+  top: 0;
+}
+.toggle__line_sec {
+  width: 35px;
+  top: 49%;
+  height: 2px;
+  //transform: translateY(-50%);
+}
+
+.toggle__line_third {
+  bottom: 0;
+  width: 20px;
+}
+
+/**********Кнопка меню мобильная****************/
+
+.catalog {
+  &__sorter {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 38px 0;
+    width: 100%;
+    @media (max-width: 768px) /* меньше или равно */ {
+      display: block;
+     //flex-direction: column;
+     min-width: 300px;
+    }
+  }
+
+  &__sorter-box {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    display: block;
+  }
+
+  &__sorter-wrap {
+    display: flex;
+
+    @media (max-width: 768px) /* меньше или равно */ {
+      justify-content: space-around;
+      margin: 10px 0;
+    }
+  }
+
+  &__sorter-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin-left: 8px;
+
+    @media (max-width: 960px) /* меньше или равно */ {
+      font-size: 16px;
+      line-height: 18px;
+      margin-left: 0;
+    }
+  }
+
+  &__sorter-price {
+    margin: 0 14px 0 48px;
+    @media (max-width: 768px) /* меньше или равно */ {
+      margin: 0 8px 0 24px;
+    }
+  }
+
+  &__sorter-age {
+    margin: 0 14px 0 55px;
+    @media (max-width: 768px) /* меньше или равно */ {
+      margin: 0 8px 0 24px;
+    }
+  }
+
+  &__sorter-arrow {
+    transform: rotate(180deg);
+
+    &.decrease {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 1200px) /* меньше или равно */ {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.card {
+  width: 380px;
+  margin: 0 0 27px 0;
+  position: relative;
+
+  @media (max-width: 960px) /* меньше или равно */ {
+    width: 50%;
+    padding: 0 8px;
+  }
+  @media (max-width: 768px) /* меньше или равно */ {
+    width: 100%;
+    min-width: 300px;
+    padding: 0;
+    // width: 100%;
+  }
+
+  &__title-age {
+    font-weight: bold;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__img img {
+    width: 100%;
+    display: block;
+  }
+
+  &__text {
+    background-color: #f3f3f3;
+    padding: 30px;
+    @media (max-width: 960px) /* меньше или равно */ {
+      padding: 15px;
+    }
+    @media (max-width: 768px) /* меньше или равно */ {
+      padding: 5px;
+    }
+  }
+
+  &__title-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title-rectangle {
+    width: 4px;
+    //height: 26px;
+    background-color: #6ebbd3;
+  }
+
+  &__title-box {
+    display: block;
+    min-width: 68px;
+    margin-right: 40px;
+
+    span {
+      display: block;
+    }
+
+    @media (max-width: 960px) /* меньше или равно */ {
+      margin-right: 20px;
+    }
+    @media (max-width: 768px) /* меньше или равно */ {
+      margin-right: 10px;
+    }
+  }
+
+  &__title-box:last-child {
+    margin-right: 20px;
+    @media (max-width: 768px) /* меньше или равно */ {
+      margin-right: 5px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  &__title-сolor {
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    border-left: 4px solid #6ebbd3;
+    padding-left: 18px;
+    margin-right: 20px;
+  }
+
+  &__price {
+    display: block;
+    margin-top: 22px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__button {
+    display: block;
+    height: 65px;
+    background: #6ebbd3;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 65px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+
+    &-sold {
+      background: #1f2021;
+    }
+  }
+
+  &__like {
+    display: block;
+    width: 46px;
+    height: 40px;
+    margin-right: 32px;
+    cursor: pointer;
+
+    &-svg {
+      fill: #fff;
+      opacity: 0.5;
+    }
+
+    &.active &-svg {
+      fill: red;
+      opacity: 1;
+    }
+
+    &_sold &-svg {
+      opacity: 1;
+    }
+  }
+
+  &__promotions {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__promotions-discount {
+    display: block;
+    margin-right: auto;
+    width: 78px;
+    height: 39px;
+    line-height: 39px;
+    margin-left: 38px;
+    text-align: center;
+    background: #e62d2d;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+  }
+}
+
+.pagination {
+  text-align: center;
+
+  &__block {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  &__button {
+    width: 380px;
+    height: 65px;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    cursor: pointer;
+
+    @media (max-width: 768px) /* меньше или равно */ {
+      width: 100%;
+    }
+  }
+}
+
+.up-button {
+  position: fixed;
+  z-index: 1;
+  padding: 0;
+  bottom: 60px;
+  right: 60px;
+  width: 59px;
+  height: 59px;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  display: none;
+  cursor: pointer;
+  background: #6ebbd3;
+
+  &:hover {
+    opacity: 0.9;
+  }
+  .up-button__arrow {
+    transform: rotate(180deg); // рисуем крестик 1 палочка на 45
+  }
+  @media (max-width: 768px) /* меньше или равно */ {
+    right: 20px;
+  }
+}
+
+.shown {
+  display: block;
+}
+
+.contacts {
+  padding-bottom: 115px;
+
+  &__wrapper {
+    background: #1f2021;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 80px 90px;
+
+    @media (max-width: 1200px) /* меньше или равно */ {
+      padding: 40px 40px 50px;
+    }
+
+    @media (max-width: 768px) /* меньше или равно */ {
+      flex-direction: column;
+      padding: 20px 20px 25px;
+      min-width: 300px;
+    }
+  }
+
+  &__tagline {
+    display: flex;
+    flex-direction: column;
+    margin-right: 85px;
+
+    @media (max-width: 1200px) /* меньше или равно */ {
+      margin-right: 35px;
+      display: block;
+    }
+    @media (max-width: 768px) /* меньше или равно */ {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+
+  &__tagline-title {
+    display: block;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    margin-bottom: 25px;
+    white-space: nowrap;
+    @media (max-width: 768px) /* меньше или равно */ {
+      font-size: 32px;
+    }
+  }
+  &__tagline-text {
+    display: block;
+    font-size: 28px;
+    line-height: 91.2%;
+    @media (max-width: 768px) /* меньше или равно */ {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+  }
+
+  &__mail {
+    position: relative;
+  }
+
+  &__form {
+    @media (max-width: 1200px) /* меньше или равно */ {
+      display: block;
+    }
+  }
+
+  &__email {
+    width: 300px;
+    height: 65px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    margin-right: 15px;
+    padding-left: 35px;
+
+    &::placeholder {
+      color: #000000;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &-error {
+      background: #ff9898;
+      margin: 20px 0;
+      display: block;
+      position: absolute;
+      top: 50px;
+    }
+
+    @media (max-width: 1200px) /* меньше или равно */ {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    width: 250px;
+    height: 65px;
+    background: #6ebbd3;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    color: #ffffff;
+    cursor: pointer;
+    @media (max-width: 1200px) /* меньше или равно */ {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+
+  &__email-error {
+    display: none;
+  }
+
+  &__checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 35px;
+    cursor: pointer;
+    user-select: none; // чтоб при клике текст лэйбл не выделялся
+  }
+
+  &__checkbox {
+    /* скрываем стандарт чекбокс */
+    display: none;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  /* создание в label псевдоэлемента before */
+  &__checkbox + label::before {
+    width: 18px;
+    height: 18px;
+    margin-right: 18px;
+    border-radius: 3px;
+    content: "";
+    background: #ffffff;
+  }
+
+  /* стили для чекбокса, находящегося в состоянии checked */
+  &__checkbox:checked + label::before {
+    // border-color: #0b76ef;
+    background: #6ebbd3;
+    background-image: url("../img/svg/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  &__label {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+  }
+}
+
+/* Media start */
+/*
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 500px) {  /* меньше или равно */
+
+/* }
+
+@media (min-width: $desktop-width) {}
+
+  @media (min-width: 1200px)
+
+  /* больше или равно */
+
+/* $desktop-width: 1300px;
+$tablet-width: 768px;
+$mobile-width-only: 767px;  */

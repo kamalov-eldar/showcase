@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alef Development</title>
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__row">
+          <div class="header__logo">
+            <a href="/" class="header__logo-link">
+              <img src="./img/svg/barcelona-metro-logo.svg" alt="Logo" class="header__logo-pic" />
+            </a>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="/">Main</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="/">Gallery</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="/">News</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="/">Profile</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__phone">
+            <span class="header__phone-number">
+              <a class="header__phone-tel" href="tel:+544349000000">+544-3490-00000</a>
+            </span>
+            <span class="header__phone-text">Звони скорее!</span>
+          </div>
+        </div>
+        <div class="wrapper__mobile-menu">
+
+          <div class="header__mobile-menu">
+
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="/">Main</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="/">Gallery</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="/">News</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="/">Profile</a>
+              </li>
+            </ul>
+
+            <div class="header__row-close">
+              <span class="close__line"></span>
+              <span class="close__line"></span>
+            </div>
+            <div class="header__phone">
+              <span class="header__phone-number">
+                <a class="header__phone-tel" href="tel:+544349000000">+544-3490-00000</a>
+              </span>
+              <span class="header__phone-text">Звони скорее!</span>
+            </div>
+          </div>
+        </div>
+        <div class="header__toggle">
+          <span class="toggle__line toggle__line_first"></span>
+          <span class="toggle__line toggle__line_sec"></span>
+          <span class="toggle__line toggle__line_third"></span>
+        </div>
+
+        <div class="header__found">Найдено 349 котов</div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="catalog">
+        <div class="wrapper">
+          <div class="catalog__sorter">
+            <span class="catalog__sorter-text">Сортировать по:</span>
+            <div class="catalog__sorter-wrap">
+              <div class="catalog__sorter-box">
+                <span class="catalog__sorter-price">Цене</span>
+                <picture>
+                  <img class="catalog__sorter-arrow" data-sort-field="price" src="./img/svg/arrow.svg" alt="" />
+                </picture>
+              </div>
+              <div class="catalog__sorter-box">
+                <span class="catalog__sorter-age">Возрасту</span>
+                <picture>
+                  <img class="catalog__sorter-arrow" data-sort-field="age" src="./img/svg/arrow.svg" alt="" />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__cards">
+            <!-- *** Каталог **** -->
+
+            <div class="card" data-price="30000" data-age="2">
+              <!-- карточка -->
+              <div class="card__img">
+                <picture>
+                  <img class="card__pic" src="/img/cat2.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__text">
+                <h2 class="card__title">Кот полосатый</h2>
+                <div class="card__title-row">
+                  <span class="card__title-сolor">Коричневый<br />окрас</span>
+                  <div class="card__title-box">
+                    <span class="card__title-age"> 2 мес.</span>
+                    <span>Возраст</span>
+                  </div>
+                  <div class="card__title-box">
+                    <span class="card__title-age">4</span>
+                    <span>Кол-во лап</span>
+                  </div>
+                </div>
+                <span class="card__price">30 000 руб.</span>
+              </div>
+              <a href="/" class="card__button">Купить</a>
+              <div class="card__promotions">
+                <span class="card__promotions-discount">-40%</span>
+                <span class="card__like js-like">
+                  <svg class="card__like-svg" width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M33.7812 0.695312C31.2851 0.695312 28.9966 1.4863 26.9794 3.04634C25.0456 4.54197 23.758 6.44693 23 7.83214C22.242 6.44684 20.9544 4.54197 19.0206 3.04634C17.0034 1.4863 14.7149 0.695312 12.2188 0.695312C5.25298 0.695312 0 6.39293 0 13.9485C0 22.1112 6.55347 27.696 16.4746 36.1505C18.1593 37.5863 20.0689 39.2138 22.0538 40.9494C22.3154 41.1785 22.6514 41.3047 23 41.3047C23.3486 41.3047 23.6846 41.1785 23.9462 40.9495C25.9312 39.2136 27.8408 37.5862 29.5265 36.1496C39.4465 27.696 46 22.1112 46 13.9485C46 6.39293 40.747 0.695312 33.7812 0.695312Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="card" data-price="40000" data-age="5">
+              <!-- карточка -->
+              <div class="card__img">
+                <picture>
+                  <img class="product__img" src="/img/cat1.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__text">
+                <h2 class="card__title">Кот полосатый</h2>
+                <div class="card__title-row">
+                  <span class="card__title-сolor">Коричневый<br />окрас</span>
+                  <div class="card__title-box">
+                    <span class="card__title-age">5 мес.</span>
+                    <span>Возраст</span>
+                  </div>
+                  <div class="card__title-box">
+                    <span class="card__title-age">4</span>
+                    <span>Кол-во лап</span>
+                  </div>
+                </div>
+                <span class="card__price">40 000 руб.</span>
+              </div>
+              <a href="/" class="card__button card__button-sold">Продан</a>
+              <div class="card__promotions">
+                <span class="card__like card__like_sold js-like">
+                  <svg class="card__like-svg" width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M33.7812 0.695312C31.2851 0.695312 28.9966 1.4863 26.9794 3.04634C25.0456 4.54197 23.758 6.44693 23 7.83214C22.242 6.44684 20.9544 4.54197 19.0206 3.04634C17.0034 1.4863 14.7149 0.695312 12.2188 0.695312C5.25298 0.695312 0 6.39293 0 13.9485C0 22.1112 6.55347 27.696 16.4746 36.1505C18.1593 37.5863 20.0689 39.2138 22.0538 40.9494C22.3154 41.1785 22.6514 41.3047 23 41.3047C23.3486 41.3047 23.6846 41.1785 23.9462 40.9495C25.9312 39.2136 27.8408 37.5862 29.5265 36.1496C39.4465 27.696 46 22.1112 46 13.9485C46 6.39293 40.747 0.695312 33.7812 0.695312Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="card" data-price="20000" data-age="8">
+              <!-- карточка -->
+              <div class="card__img">
+                <picture>
+                  <img class="product__img" src="/img/cat3.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__text">
+                <h2 class="card__title">Кот полосатый</h2>
+                <div class="card__title-row">
+                  <span class="card__title-сolor">Коричневый<br />окрас</span>
+                  <div class="card__title-box">
+                    <span class="card__title-age">8 мес.</span>
+                    <span>Возраст</span>
+                  </div>
+                  <div class="card__title-box">
+                    <span class="card__title-age">4</span>
+                    <span>Кол-во лап</span>
+                  </div>
+                </div>
+                <span class="card__price">20 000 руб.</span>
+              </div>
+              <a href="/" class="card__button">Купить</a>
+              <div class="card__promotions">
+                <span class="card__like js-like">
+                  <svg class="card__like-svg" width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M33.7812 0.695312C31.2851 0.695312 28.9966 1.4863 26.9794 3.04634C25.0456 4.54197 23.758 6.44693 23 7.83214C22.242 6.44684 20.9544 4.54197 19.0206 3.04634C17.0034 1.4863 14.7149 0.695312 12.2188 0.695312C5.25298 0.695312 0 6.39293 0 13.9485C0 22.1112 6.55347 27.696 16.4746 36.1505C18.1593 37.5863 20.0689 39.2138 22.0538 40.9494C22.3154 41.1785 22.6514 41.3047 23 41.3047C23.3486 41.3047 23.6846 41.1785 23.9462 40.9495C25.9312 39.2136 27.8408 37.5862 29.5265 36.1496C39.4465 27.696 46 22.1112 46 13.9485C46 6.39293 40.747 0.695312 33.7812 0.695312Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="card" data-price="25000" data-age="12">
+              <!-- карточка -->
+              <div class="card__img">
+                <picture>
+                  <img class="product__img" src="/img/cat1.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__text">
+                <h2 class="card__title">Кот полосатый</h2>
+                <div class="card__title-row">
+                  <span class="card__title-сolor">Коричневый<br />окрас</span>
+                  <div class="card__title-box">
+                    <span class="card__title-age">12 мес.</span>
+                    <span>Возраст</span>
+                  </div>
+                  <div class="card__title-box">
+                    <span class="card__title-age">4</span>
+                    <span>Кол-во лап</span>
+                  </div>
+                </div>
+                <span class="card__price">25 000 руб.</span>
+              </div>
+              <a href="/" class="card__button">Купить</a>
+              <div class="card__promotions">
+                <span class="card__like js-like">
+                  <svg class="card__like-svg" width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M33.7812 0.695312C31.2851 0.695312 28.9966 1.4863 26.9794 3.04634C25.0456 4.54197 23.758 6.44693 23 7.83214C22.242 6.44684 20.9544 4.54197 19.0206 3.04634C17.0034 1.4863 14.7149 0.695312 12.2188 0.695312C5.25298 0.695312 0 6.39293 0 13.9485C0 22.1112 6.55347 27.696 16.4746 36.1505C18.1593 37.5863 20.0689 39.2138 22.0538 40.9494C22.3154 41.1785 22.6514 41.3047 23 41.3047C23.3486 41.3047 23.6846 41.1785 23.9462 40.9495C25.9312 39.2136 27.8408 37.5862 29.5265 36.1496C39.4465 27.696 46 22.1112 46 13.9485C46 6.39293 40.747 0.695312 33.7812 0.695312Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="card" data-price="30000" data-age="1">
+              <!-- карточка -->
+              <div class="card__img">
+                <picture>
+                  <img class="product__img" src="/img/cat3.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__text">
+                <h2 class="card__title">Кот полосатый</h2>
+                <div class="card__title-row">
+                  <span class="card__title-сolor">Коричневый <br />окрас</span>
+                  <div class="card__title-box">
+                    <span class="card__title-age">1 мес.</span>
+                    <span>Возраст</span>
+                  </div>
+                  <div class="card__title-box">
+                    <span class="card__title-age">4</span>
+                    <span>Кол-во лап</span>
+                  </div>
+                </div>
+                <span class="card__price">30 000 руб.</span>
+              </div>
+              <a href="/" class="card__button">Купить</a>
+              <div class="card__promotions">
+                <span class="card__promotions-discount">-40%</span>
+                <span class="card__like js-like">
+                  <svg class="card__like-svg" width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M33.7812 0.695312C31.2851 0.695312 28.9966 1.4863 26.9794 3.04634C25.0456 4.54197 23.758 6.44693 23 7.83214C22.242 6.44684 20.9544 4.54197 19.0206 3.04634C17.0034 1.4863 14.7149 0.695312 12.2188 0.695312C5.25298 0.695312 0 6.39293 0 13.9485C0 22.1112 6.55347 27.696 16.4746 36.1505C18.1593 37.5863 20.0689 39.2138 22.0538 40.9494C22.3154 41.1785 22.6514 41.3047 23 41.3047C23.3486 41.3047 23.6846 41.1785 23.9462 40.9495C25.9312 39.2136 27.8408 37.5862 29.5265 36.1496C39.4465 27.696 46 22.1112 46 13.9485C46 6.39293 40.747 0.695312 33.7812 0.695312Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="card" data-price="10000" data-age="9">
+              <!-- карточка -->
+              <div class="card__img">
+                <picture>
+                  <img class="product__img" src="/img/cat2.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="card__text">
+                <h2 class="card__title">Кот полосатый</h2>
+                <div class="card__title-row">
+                  <span class="card__title-сolor">Коричневый<br />окрас</span>
+                  <div class="card__title-box">
+                    <span class="card__title-age">9 мес.</span>
+                    <span>Возраст</span>
+                  </div>
+                  <div class="card__title-box">
+                    <span class="card__title-age">4</span>
+                    <span>Кол-во лап</span>
+                  </div>
+                </div>
+                <span class="card__price">10 000 руб.</span>
+              </div>
+              <a href="/" class="card__button card__button-sold">Продан</a>
+              <div class="card__promotions">
+                <span class="card__like card__like_sold js-like">
+                  <svg class="card__like-svg" width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M33.7812 0.695312C31.2851 0.695312 28.9966 1.4863 26.9794 3.04634C25.0456 4.54197 23.758 6.44693 23 7.83214C22.242 6.44684 20.9544 4.54197 19.0206 3.04634C17.0034 1.4863 14.7149 0.695312 12.2188 0.695312C5.25298 0.695312 0 6.39293 0 13.9485C0 22.1112 6.55347 27.696 16.4746 36.1505C18.1593 37.5863 20.0689 39.2138 22.0538 40.9494C22.3154 41.1785 22.6514 41.3047 23 41.3047C23.3486 41.3047 23.6846 41.1785 23.9462 40.9495C25.9312 39.2136 27.8408 37.5862 29.5265 36.1496C39.4465 27.696 46 22.1112 46 13.9485C46 6.39293 40.747 0.695312 33.7812 0.695312Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="pagination">
+        <div class="wrapper">
+          <div class="pagination__block">
+            <button class="pagination__button" type="submit">Показать еще 20</button>
+          </div>
+        </div>
+      </div>
+      <button class="up-button shown" type="button">
+        <svg class="up-button__arrow" width="15" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M8.0853 8.66685L14.7604 1.99166C14.9149 1.83727 15 1.63118 15 1.41142C15 1.19167 14.9149 0.985572 14.7604 0.831183L14.2689 0.339602C13.9487 0.0197263 13.4282 0.0197262 13.1084 0.339602L7.50311 5.94492L1.89157 0.333382C1.73706 0.178993 1.53109 0.0937494 1.31146 0.0937494C1.09158 0.0937494 0.885606 0.178993 0.730973 0.333382L0.239635 0.824963C0.0851249 0.979474 3.76698e-06 1.18545 3.75737e-06 1.4052C3.74777e-06 1.62496 0.0851249 1.83105 0.239635 1.98544L6.9208 8.66685C7.0758 8.82161 7.28275 8.90661 7.50275 8.90612C7.7236 8.90661 7.93042 8.82161 8.0853 8.66685Z"
+            fill="#ffffff"
+          />
+        </svg>
+      </button>
+    </main>
+    <footer class="contacts">
+      <div class="wrapper">
+        <div class="contacts__wrapper">
+          <div class="contacts__tagline">
+            <span class="contacts__tagline-title">Успей купить!</span>
+            <span class="contacts__tagline-text"
+              >Подпишись и успей <br />
+              словить все акции</span
+            >
+          </div>
+          <form class="contacts__form js-form" name="form-email" action="#" method="GET">
+            <div class="contacts__mail">
+              <input class="contacts__email js-form-email" type="text" name="user-mail" placeholder="Email" />
+              <button class="contacts__button" type="submit">Подписаться</button>
+            </div>
+            <div class="contacts__subscribe">
+              <input class="contacts__checkbox" type="checkbox" name="subscribe" id="subscribe" />
+              <label class="contacts__label" for="subscribe" tabindex="0">Подписаться на новости</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/js/menu_handler.js"></script>
+    <script src="/js/onscroll.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/favorites.js"></script>
+    <script src="/js/sort.js"></script>
+  </body>
+</html>
