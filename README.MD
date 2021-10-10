@@ -2,4 +2,4 @@
 
 ### 
 
-![alt text](https://github.com/kamalov-eldar/software-tester/blob/main/testing/screen/ToDo.jpg)
+![alt text](https://github.com/kamalov-eldar/t-task/blob/main/t-task.jpg)
