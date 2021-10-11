@@ -9,4 +9,4 @@ Javascript
 3. Валидация формы: если email неподходящего вида, то выдавать ошибку;  
 4. При клике на сердечко показывать уведомление о добавлении в избранное;  
 
-![alt text](https://github.com/kamalov-eldar/t-task/blob/main/t-task.jpg)
+
