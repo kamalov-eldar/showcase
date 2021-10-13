@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $(".catalog__sorter-arrow").on("click", (event) => {
+  $(".catalog__sorter-box").on("click", (event) => {
     const decrease = $(event.currentTarget).hasClass("decrease");
 
     if (decrease) {

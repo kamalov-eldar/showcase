@@ -2,8 +2,8 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: local(""), url("/fonts/Montserrat-Regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/Montserrat-Regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -11,8 +11,8 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/Montserrat-Bold.woff") format("woff");
+  src: local(""), url("/fonts/Montserrat-Bold.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/Montserrat-Bold.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -294,13 +294,12 @@ body {
   &__sorter {
     display: flex;
     align-items: center;
-    cursor: pointer;
     margin: 38px 0;
     width: 100%;
     @media (max-width: 768px) /* меньше или равно */ {
       display: block;
-     //flex-direction: column;
-     min-width: 300px;
+      //flex-direction: column;
+      min-width: 300px;
     }
   }
 
@@ -310,6 +309,23 @@ body {
     line-height: 22px;
     color: #000000;
     display: block;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #3416b6;
+      fill: #3416b6;
+    }
+    .catalog__sorter-arrow {
+      transform: rotate(180deg);
+    }
+    &.decrease {
+      .catalog__sorter-arrow {
+        transform: rotate(0deg);
+      }
+    }
   }
 
   &__sorter-wrap {
@@ -347,14 +363,6 @@ body {
     margin: 0 14px 0 55px;
     @media (max-width: 768px) /* меньше или равно */ {
       margin: 0 8px 0 24px;
-    }
-  }
-
-  &__sorter-arrow {
-    transform: rotate(180deg);
-
-    &.decrease {
-      transform: rotate(0deg);
     }
   }
 
