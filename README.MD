@@ -1,9 +1,14 @@
 # t-task
 
 ###  
-Адаптивная верстка  
+Адаптивная вёрстка: мобильная, планшетная и десктопная  
 
-https://www.figma.com/file/UXn4IQQqHM2TdpIpNJPeFt/T-Task?node-id=0%3A1
+![image](https://github.com/kamalov-eldar/theatre/blob/master/img/DemoT-task.gif)
+
+
+макет -> https://www.figma.com/file/UXn4IQQqHM2TdpIpNJPeFt/T-Task?node-id=0%3A1
+
+
 
 Javascript  
 1. Реализовывать сортировку. При клике на поле сортировки “Цене” или “Возраст” карточки должны сортироваться по выбранному полю;  
@@ -11,4 +16,6 @@ Javascript
 3. Валидация формы: если email неподходящего вида, то выдавать ошибку;  
 4. При клике на сердечко показывать уведомление о добавлении в избранное;  
 
+
+готовый сайт -> https://kamalov-eldar.github.io/t-task/
 
