@@ -3,7 +3,7 @@
 ###  
 Адаптивная вёрстка: мобильная, планшетная и десктопная  
 
-![image](https://github.com/kamalov-eldar/theatre/blob/master/img/DemoT-task.gif)
+![image](https://github.com/kamalov-eldar/t-task/blob/main/img/DemoT-task.gif)
 
 
 макет -> https://www.figma.com/file/UXn4IQQqHM2TdpIpNJPeFt/T-Task?node-id=0%3A1
